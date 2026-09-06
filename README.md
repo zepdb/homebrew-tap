@@ -10,4 +10,4 @@ brew install zepdb/tap/zeppelin-embed
 
 The formula installs the public C header plus static and dynamic libraries. Language packages such as Rust, Python, Swift, and Node.js are distributed through their native package managers.
 
-The tap checks for new published releases every hour. It verifies the SDK archive layout and pins each formula to the release asset's SHA-256 checksum before updating `main`.
+The manually dispatched update workflow verifies the latest published SDK archive and pins the formula to its SHA-256 checksum before updating `main`.
