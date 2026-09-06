@@ -31,3 +31,20 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update Zeppelin Embed to $version"
           git push
+
+  test:
+    name: Test published formula
+    needs: update
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Validate tap
+        run: |
+          ruby -c Formula/zeppelin-embed.rb
+          brew style --formula Formula/zeppelin-embed.rb
+          brew tap zepdb/tap "$GITHUB_WORKSPACE"
+          brew trust --formula zepdb/tap/zeppelin-embed
+          brew install zepdb/tap/zeppelin-embed
+          brew test zepdb/tap/zeppelin-embed
