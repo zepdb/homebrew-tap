@@ -43,8 +43,8 @@ jobs:
       - name: Validate tap
         run: |
           ruby -c Formula/zeppelin-embed.rb
-          brew style --formula Formula/zeppelin-embed.rb
           brew tap zepdb/tap "$GITHUB_WORKSPACE"
+          brew style --formula zepdb/tap/zeppelin-embed
           brew trust --formula zepdb/tap/zeppelin-embed
           brew install zepdb/tap/zeppelin-embed
           brew test zepdb/tap/zeppelin-embed
