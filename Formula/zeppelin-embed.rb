@@ -1,9 +1,9 @@
 class ZeppelinEmbed < Formula
   desc "In-process vector, lexical, and hybrid search for macOS"
   homepage "https://github.com/zepdb/zeppelin-embed"
-  url "https://github.com/zepdb/zeppelin-embed/releases/download/v0.3.0/zeppelin-embed-macos-arm64.tar.gz"
-  version "0.3.0"
-  sha256 "4b0aa7e5d3be86452bb38a6b2ce28f5d40656a11a5ede47e5557b0cfb796f6e5"
+  url "https://github.com/zepdb/zeppelin-embed/releases/download/v0.4.0/zeppelin-embed-macos-arm64.tar.gz"
+  version "0.4.0"
+  sha256 "5ceb535f0dc0ed294e933ca2487ff59dda2db917f67c2a342f5032bff5d6df14"
   license "GPL-3.0-only"
 
   depends_on arch: :arm64
